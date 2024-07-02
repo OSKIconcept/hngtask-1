@@ -1,0 +1,169 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.box {
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 5em;
+  margin: 5em auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.art {
+  display: flex;
+  flex-direction: column;
+}
+
+.dates {
+  display: flex;
+}
+
+.img {
+  opacity: 95%;
+  cursor: pointer;
+}
+
+.img:hover {
+  opacity: 100%;
+}
+
+.div {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+}
+
+p {
+  font-size: clamp(0.85rem, 1.1vw, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+}
+
+a {
+  font-size: clamp(0.85rem, 1.1vw, 1.5rem);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.des {
+  margin: 2em 0;
+  gap: 0;
+}
+
+.des p {
+  font-weight: bold;
+}
+
+.des span {
+  font-weight: lighter;
+}
+
+.dates {
+  display: flex;
+  gap: 20px;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  cursor: pointer;
+  text-decoration: none;
+  color: gray;
+}
+
+.links a:hover {
+  color: black;
+}
+
+.foot {
+  border-top: 1px dotted gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*for mobile*/
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em auto;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+}
+
+.links a {
+  position: relative;
+}
+
+.links a::after {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  right: -10px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2em;
+    margin: 4em auto;
+  }
+
+  .img {
+    max-width: 100%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .art {
+    text-align: center;
+    width: 100%;
+  }
+
+  .dates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
